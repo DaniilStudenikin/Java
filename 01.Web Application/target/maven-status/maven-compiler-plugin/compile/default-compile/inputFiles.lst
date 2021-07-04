@@ -1,0 +1,17 @@
+C:\Users\fastrapier\Desktop\Java\01.Web Application\src\main\java\ru\itis\javalab\filters\AuthFilter.java
+C:\Users\fastrapier\Desktop\Java\01.Web Application\src\main\java\ru\itis\javalab\repositories\UsersRepository.java
+C:\Users\fastrapier\Desktop\Java\01.Web Application\src\main\java\ru\itis\javalab\servlets\UsersServlet.java
+C:\Users\fastrapier\Desktop\Java\01.Web Application\src\main\java\ru\itis\javalab\services\UserServiceImpl.java
+C:\Users\fastrapier\Desktop\Java\01.Web Application\src\main\java\ru\itis\javalab\filters\RequestHeadersFilter.java
+C:\Users\fastrapier\Desktop\Java\01.Web Application\src\main\java\ru\itis\javalab\repositories\UsersRepositoryJdbcImpl.java
+C:\Users\fastrapier\Desktop\Java\01.Web Application\src\main\java\ru\itis\javalab\filters\LoggingFilter.java
+C:\Users\fastrapier\Desktop\Java\01.Web Application\src\main\java\ru\itis\javalab\repositories\CrudRepository.java
+C:\Users\fastrapier\Desktop\Java\01.Web Application\src\main\java\ru\itis\javalab\models\User.java
+C:\Users\fastrapier\Desktop\Java\01.Web Application\src\main\java\ru\itis\javalab\listners\CustomServletContextListener.java
+C:\Users\fastrapier\Desktop\Java\01.Web Application\src\main\java\ru\itis\javalab\repositories\SimpleJdbcTemplate.java
+C:\Users\fastrapier\Desktop\Java\01.Web Application\src\main\java\ru\itis\javalab\repositories\RowMapper.java
+C:\Users\fastrapier\Desktop\Java\01.Web Application\src\main\java\ru\itis\javalab\services\UserService.java
+C:\Users\fastrapier\Desktop\Java\01.Web Application\src\main\java\ru\itis\javalab\filters\RequestUrlFilter.java
+C:\Users\fastrapier\Desktop\Java\01.Web Application\src\main\java\ru\itis\javalab\servlets\RegisterServlet.java
+C:\Users\fastrapier\Desktop\Java\01.Web Application\src\main\java\ru\itis\javalab\servlets\ProfileServlet.java
+C:\Users\fastrapier\Desktop\Java\01.Web Application\src\main\java\ru\itis\javalab\servlets\LoginServlet.java

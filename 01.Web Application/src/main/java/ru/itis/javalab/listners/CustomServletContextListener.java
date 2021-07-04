@@ -2,6 +2,8 @@ package ru.itis.javalab.listners;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import ru.itis.javalab.repositories.UsersRepository;
 import ru.itis.javalab.repositories.UsersRepositoryJdbcImpl;
 import ru.itis.javalab.services.UserService;
@@ -40,7 +42,9 @@ public class CustomServletContextListener implements ServletContextListener {
 
         UsersRepository usersRepository = new UsersRepositoryJdbcImpl(dataSource);
         UserService userService = new UserServiceImpl(usersRepository);
+        PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 
+        servletContext.setAttribute("passwordEncoder", passwordEncoder);
         servletContext.setAttribute("userService", userService);
     }
 

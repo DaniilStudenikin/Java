@@ -4,7 +4,9 @@ import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
+
 @WebFilter("/*")
 public class AuthFilter implements Filter {
     @Override
@@ -16,11 +18,17 @@ public class AuthFilter implements Filter {
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         HttpServletRequest request = (HttpServletRequest) servletRequest;
         HttpServletResponse response = (HttpServletResponse) servletResponse;
-        if (request.getParameter(("UUID")) != null)
-            request.getRequestDispatcher("/jsp/profile.jsp").forward(servletRequest, servletResponse);
-        else
-            request.getRequestDispatcher("/jsp/login.jsp").forward(servletRequest, servletResponse);
+        if (request.getSession(false) != null) {
+            System.out.println(request.getSession(false).getAttribute("Hello"));
+            request.getRequestDispatcher("/jsp/profile.jsp").forward(request, response);
 
+        } else {
+            HttpSession session = request.getSession();
+            session.setAttribute("Hello", "Hello from server");
+            request.getRequestDispatcher("/jsp/login.jsp").forward(request, response);
+
+        }
+        filterChain.doFilter(servletRequest, servletResponse);
     }
 
     @Override
