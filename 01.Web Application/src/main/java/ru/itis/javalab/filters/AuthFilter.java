@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-@WebFilter("/*")
+@WebFilter("/profile")
 public class AuthFilter implements Filter {
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
@@ -19,7 +19,7 @@ public class AuthFilter implements Filter {
         HttpServletRequest request = (HttpServletRequest) servletRequest;
         HttpServletResponse response = (HttpServletResponse) servletResponse;
         if (request.getSession(false) != null) {
-            System.out.println(request.getSession(false).getAttribute("Hello"));
+            System.out.println(request.getSession(false).getAttribute("JSESSIONID"));
             request.getRequestDispatcher("/jsp/profile.jsp").forward(request, response);
 
         } else {

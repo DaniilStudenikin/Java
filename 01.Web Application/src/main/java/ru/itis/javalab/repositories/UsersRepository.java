@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Optional;
 
 public interface UsersRepository extends CrudRepository<User> {
+    List<User> findAll(int page, int size);
     Optional<User> findByUsername(String username);
     void update(Object ... args);
     void save(Object ... args);

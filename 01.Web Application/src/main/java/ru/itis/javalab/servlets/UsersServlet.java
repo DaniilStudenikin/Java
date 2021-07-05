@@ -28,7 +28,6 @@ public class UsersServlet extends HttpServlet {
     public void init(ServletConfig config) throws ServletException {
         ServletContext servletContext = config.getServletContext();
         this.userService = (UserService) servletContext.getAttribute("userService");
-//        System.out.println(userService.getAllUsers());
     }
 
     @Override

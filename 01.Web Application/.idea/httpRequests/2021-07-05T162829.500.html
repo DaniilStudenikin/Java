@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ru">
+<head><title>HTTP Status 500 – Internal Server Error</title>
+    <style type="text/css">body {
+        font-family: Tahoma, Arial, sans-serif;
+    }
+
+    h1, h2, h3, b {
+        color: white;
+        background-color: #525D76;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    h3 {
+        font-size: 14px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    a {
+        color: black;
+    }
+
+    .line {
+        height: 1px;
+        background-color: #525D76;
+        border: none;
+    }</style>
+</head>
+<body><h1>HTTP Status 500 – Internal Server Error</h1>
+<hr class="line"/>
+<p><b>Type</b> Exception Report</p>
+<p><b>Message</b> PreparedStatementCallback; bad SQL grammar [select * from students order by id limit ? offset ?];
+    nested exception is org.postgresql.util.PSQLException: Колонки username не найдено в этом ResultSet’’е.</p>
+<p><b>Description</b> The server encountered an unexpected condition that prevented it from fulfilling the request.</p>
+<p><b>Exception</b></p>
+<pre>org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [select * from students order by id limit ? offset ?]; nested exception is org.postgresql.util.PSQLException: Колонки username не найдено в этом ResultSet’’е.
+	org.springframework.jdbc.support.SQLStateSQLExceptionTranslator.doTranslate(SQLStateSQLExceptionTranslator.java:101)
+	org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:70)
+	org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:79)
+	org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:79)
+	org.springframework.jdbc.core.JdbcTemplate.translateException(JdbcTemplate.java:1541)
+	org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:667)
+	org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:713)
+	org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:738)
+	org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:794)
+	org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate.query(NamedParameterJdbcTemplate.java:209)
+	org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate.query(NamedParameterJdbcTemplate.java:216)
+	ru.itis.javalab.repositories.UsersRepositoryJdbcTemplateImpl.findAll(UsersRepositoryJdbcTemplateImpl.java:52)
+	ru.itis.javalab.services.UserServiceImpl.getAllUsers(UserServiceImpl.java:43)
+	ru.itis.javalab.servlets.UsersJsonServlet.doGet(UsersJsonServlet.java:34)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	ru.itis.javalab.filters.LoggingFilter.doFilter(LoggingFilter.java:25)
+	ru.itis.javalab.filters.RequestHeadersFilter.doFilter(RequestHeadersFilter.java:22)
+	ru.itis.javalab.filters.RequestUrlFilter.doFilter(RequestUrlFilter.java:21)
+</pre>
+<p><b>Root Cause</b></p>
+<pre>org.postgresql.util.PSQLException: Колонки username не найдено в этом ResultSet’’е.
+	org.postgresql.jdbc.PgResultSet.findColumn(PgResultSet.java:2748)
+	org.postgresql.jdbc.PgResultSet.getString(PgResultSet.java:2605)
+	com.zaxxer.hikari.pool.HikariProxyResultSet.getString(HikariProxyResultSet.java)
+	ru.itis.javalab.repositories.UsersRepositoryJdbcTemplateImpl.lambda$new$0(UsersRepositoryJdbcTemplateImpl.java:22)
+	org.springframework.jdbc.core.RowMapperResultSetExtractor.extractData(RowMapperResultSetExtractor.java:94)
+	org.springframework.jdbc.core.RowMapperResultSetExtractor.extractData(RowMapperResultSetExtractor.java:61)
+	org.springframework.jdbc.core.JdbcTemplate$1.doInPreparedStatement(JdbcTemplate.java:723)
+	org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:651)
+	org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:713)
+	org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:738)
+	org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:794)
+	org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate.query(NamedParameterJdbcTemplate.java:209)
+	org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate.query(NamedParameterJdbcTemplate.java:216)
+	ru.itis.javalab.repositories.UsersRepositoryJdbcTemplateImpl.findAll(UsersRepositoryJdbcTemplateImpl.java:52)
+	ru.itis.javalab.services.UserServiceImpl.getAllUsers(UserServiceImpl.java:43)
+	ru.itis.javalab.servlets.UsersJsonServlet.doGet(UsersJsonServlet.java:34)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	ru.itis.javalab.filters.LoggingFilter.doFilter(LoggingFilter.java:25)
+	ru.itis.javalab.filters.RequestHeadersFilter.doFilter(RequestHeadersFilter.java:22)
+	ru.itis.javalab.filters.RequestUrlFilter.doFilter(RequestUrlFilter.java:21)
+</pre>
+<p><b>Note</b> The full stack trace of the root cause is available in the server logs.</p>
+<hr class="line"/>
+<h3>Apache Tomcat/9.0.48</h3></body>
+</html>
