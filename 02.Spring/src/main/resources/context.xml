@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-
+    <context:property-placeholder location="db.properties"/>
     <bean id="front" class="ru.itis.javalab.front.FrontImpl">
         <constructor-arg name="userService" ref="userService"/>
     </bean>
@@ -30,11 +31,11 @@
     </bean>
 
     <bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
-        <property name="jdbcUrl" value="jdbc:postgresql://localhost:5432/account"/>
-        <property name="username" value="postgres"/>
-        <property name="password" value="root"/>
-        <property name="driverClassName" value="org.postgresql.Driver"/>
-        <property name="maximumPoolSize" value="20"/>
+        <property name="jdbcUrl" value="${db.url}"/>
+        <property name="username" value="${db.username}"/>
+        <property name="password" value="${db.password}"/>
+        <property name="driverClassName" value="${db.driver.classname}"/>
+        <property name="maximumPoolSize" value="${db.hikari.max-pool-size}"/>
 
     </bean>
 </beans>
