@@ -13,31 +13,26 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-/**
- * 22.10.2020
- * 05. WebApp
- *
- * @author Sidikov Marsel (First Software Engineering Platform)
- * @version v1.0
- */
+
 public class UsersRepositoryJdbcTemplateImpl implements UsersRepository {
 
     private JdbcTemplate jdbcTemplate;
     private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 
     //language=SQL
-    private static final String SQL_SELECT_BY_ID = "select * from students where id = ?";
+    private static final String SQL_SELECT_BY_ID = "select * from students where id = ? ";
 
     //language=SQL
     private static final String SQL_SELECT_ALL_WITH_PAGES = "select * from students order by id limit :limit offset :offset ;";
 
     //language=SQL
     private static final String SQL_SELECT_ALL = "select * from students";
-
     //language=SQL
-    private static final String SQL_SELECT_BY_AGE = "select * from students where age = ?";
+    private static final String SQL_USER_INSERT = "insert into students(first_name, last_name, age) VALUES (?,?,?)";
+    //language=SQL
+    private static final String SQL_SELECT_BY_AGE = "select * from students where age = :age";
 
-    private RowMapper<User> row = (row, i) -> User.builder()
+    private final RowMapper<User> row = (row, i) -> User.builder()
             .id(row.getLong("id"))
             .firstName(row.getString("first_name"))
             .lastName(row.getString("last_name"))
@@ -87,8 +82,7 @@ public class UsersRepositoryJdbcTemplateImpl implements UsersRepository {
 
     @Override
     public void save(User entity) {
-        // TODO
-        System.out.println(entity);
+        jdbcTemplate.update(SQL_USER_INSERT, entity.getFirstName(), entity.getLastName(), entity.getAge());
     }
 
     @Override
