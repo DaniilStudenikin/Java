@@ -1,6 +1,9 @@
+package ru.itis;
+
 public class Component {
     private int privateField;
     public int publicField;
+    public static final String staticField = "FINAL";
 
     public Component(int privateField, int publicField) {
         this.privateField = 10;
@@ -19,7 +22,15 @@ public class Component {
         System.out.println(privateField + " " + publicField);
     }
 
-    public int getSumOfFields() {
-        return this.privateField + this.publicField;
+    private boolean privateMethod() {
+        return this.privateField == this.publicField;
+    }
+
+    public int getSumOfFields(int a) {
+        return a + this.privateField + this.publicField;
+    }
+
+    public static int methodWithArgs(int a, int b, int c) {
+        return a + b + c;
     }
 }
