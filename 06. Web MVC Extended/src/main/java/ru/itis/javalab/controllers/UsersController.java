@@ -20,14 +20,14 @@ public class UsersController {
     @Autowired
     private UsersService usersService;
 
-    //    @RequestMapping(value = "/users", method = RequestMethod.GET)
-//    public ModelAndView getUsersPage(HttpServletRequest request, HttpServletResponse response) {
-//        ModelAndView modelAndView = new ModelAndView();
-//        modelAndView.setViewName("users_view");
-//        modelAndView.addObject("users", usersService.getAllUsers());
-//        System.out.println("request - " + request + " , response - " + response);
-//        return modelAndView;
-//    }
+        @RequestMapping(value = "/users", method = RequestMethod.GET)
+    public ModelAndView getUsersPage(HttpServletRequest request, HttpServletResponse response) {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("users_view");
+        modelAndView.addObject("users", usersService.getAllUsers());
+        System.out.println("request - " + request + " , response - " + response);
+        return modelAndView;
+    }
 //    @RequestMapping(value = "/users", method = RequestMethod.POST)
 //    public ModelAndView addUser(UserDto user) {
 //        usersService.addUser(user);
@@ -46,7 +46,7 @@ public class UsersController {
         return "users_view";
     }
 
-    @RequestMapping(value = "/users", method = RequestMethod.POST)
+        @RequestMapping(value = "/users", method = RequestMethod.POST)
     public String addUser(UserDto user) {
         usersService.addUser(user);
         return "redirect:/users";

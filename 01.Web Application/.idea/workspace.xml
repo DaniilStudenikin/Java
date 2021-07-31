@@ -11,6 +11,38 @@
   <component name="ChangeListManager">
     <list default="true" id="ff9b0200-7fd9-45fe-b5e3-60a95e3a23b3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04.RestApiDemo/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04.RestApiDemo/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04.RestApiDemo/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04.RestApiDemo/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04.RestApiDemo/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04.RestApiDemo/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04.RestApiDemo/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04.RestApiDemo/src/main/java/ru/itis/restapidemo/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04.RestApiDemo/src/main/java/ru/itis/restapidemo/controllers/CourseController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04.RestApiDemo/src/main/java/ru/itis/restapidemo/controllers/TeachersController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04.RestApiDemo/src/main/java/ru/itis/restapidemo/dto/CourseDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04.RestApiDemo/src/main/java/ru/itis/restapidemo/dto/TeacherDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04.RestApiDemo/src/main/java/ru/itis/restapidemo/models/Course.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04.RestApiDemo/src/main/java/ru/itis/restapidemo/models/Lesson.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04.RestApiDemo/src/main/java/ru/itis/restapidemo/models/Teacher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04.RestApiDemo/src/main/java/ru/itis/restapidemo/models/repositories/CoursesRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04.RestApiDemo/src/main/java/ru/itis/restapidemo/models/repositories/LessonsRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04.RestApiDemo/src/main/java/ru/itis/restapidemo/models/repositories/TeachersRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04.RestApiDemo/src/main/java/ru/itis/restapidemo/services/CourseService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04.RestApiDemo/src/main/java/ru/itis/restapidemo/services/CourseServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04.RestApiDemo/src/main/java/ru/itis/restapidemo/services/TeacherService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04.RestApiDemo/src/main/java/ru/itis/restapidemo/services/TeacherServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04.RestApiDemo/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04.RestApiDemo/src/main/resources/http/requests.http" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04.RestApiDemo/src/test/java/ru/itis/restapidemo/ApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06. Web MVC Extended/src/main/java/ru/itis/javalab/controllers/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../06. Web MVC Extended/src/main/java/ru/itis/javalab/controllers/UsersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06. Web MVC Extended/src/main/java/ru/itis/javalab/repositories/UsersRepositoryJdbcTemplateImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../06. Web MVC Extended/src/main/java/ru/itis/javalab/repositories/UsersRepositoryJdbcTemplateImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06. Web MVC Extended/src/main/webapp/WEB-INF/ftl/users_view.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/../06. Web MVC Extended/src/main/webapp/WEB-INF/ftl/users_view.ftlh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06. Web MVC Extended/target/classes/requests/requests.http" beforeDir="false" afterPath="$PROJECT_DIR$/../06. Web MVC Extended/target/classes/requests/requests.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06. Web MVC Extended/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../06. Web MVC Extended/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06. Web MVC Extended/target/webapp-example-0.1/WEB-INF/classes/requests/requests.http" beforeDir="false" afterPath="$PROJECT_DIR$/../06. Web MVC Extended/target/webapp-example-0.1/WEB-INF/classes/requests/requests.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06. Web MVC Extended/webapp-example.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../06. Web MVC Extended/webapp-example.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +91,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../02.Spring" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -173,6 +205,8 @@
       <workItem from="1625481789117" duration="6586000" />
       <workItem from="1625498851620" duration="44000" />
       <workItem from="1625790442245" duration="1105000" />
+      <workItem from="1627073660753" duration="27000" />
+      <workItem from="1627157778899" duration="23000" />
     </task>
     <servers />
   </component>
